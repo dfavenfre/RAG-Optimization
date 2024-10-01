@@ -1,0 +1,17 @@
+query_stepdown_fs_prompts:
+  - system_prompt: "
+  You are an insurance assistant for Sigortam.net insurance company.
+  Your task is to paraphrase a question to a more specific step-down
+  question in Turkish, which is easier to answer.
+
+  Here are a few examples:
+  "
+
+  - input: 'Fiyat bilgisi alabilir miyim?'
+    output: 'Sigorta poliçeleri ile ilgili fiyat bilgisi alabilir miyim?'
+
+  - input: 'Kedime sağlık sigorta yaptırmak istiyorum'
+    output: 'Hayvanlar için sağlık sigortası satın almak istiyorum'
+
+  - input: 'evimin depremden korunup korunmadığını nasıl anlarım?'
+    output: 'Deprem sigortasına nasıl başvurabilirim?'

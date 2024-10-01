@@ -1,0 +1,65 @@
+chunk_summarizer_prompt:
+  sys_prompt: '
+  1 - Your task is to find topic keywords based on what the given piece of context is about
+  Context: {context}
+  Output format instructions: {output_format}
+  '
+
+raw_raq_prompt:
+  sys_prompt: '
+  1 - Your task is to answer the following question based on the context you are given
+  Context:\n{context}
+  Now answer this question:\n{question}
+  '
+
+raw_multi_query_prompt:
+  sys_prompt: '
+  1 - Your task is to generate four different versions of the given user question in
+  Turkish to retrieve relevant documents from a vector database.
+  
+  2 - By generating multiple perspectives on the user question, your goal is to help
+  the user overcome some of the limitations of the distance-based similarity search.
+  
+  3 - Provide these alternative questions separated by newlines.
+  Original question: {question}
+  '
+
+raw_query_decomposition_prompt:
+  sys_prompt: '
+  You are a helpful assistant that generates multiple sub-questions related to an input question in Turkish. \n
+  The goal is to break down the input into a set of sub-problems / sub-questions that can be answers in isolation. \n
+  Generate multiple search queries related to: {question} \n
+  Output (3 queries):
+  '
+
+raw_recursive_query_answering_prompt:
+  sys_prompt: '
+  Here is the question you need to answer:
+  \n --- \n {question} \n --- \n
+  Here is any available background question + answer pairs:
+  \n --- \n {q_a_pairs} \n --- \n
+  Here is additional context relevant to the question:
+  \n --- \n {context} \n --- \n
+  Use the above context and any background question + answer pairs to answer the question:\n{question}
+  '
+
+raw_query_stepdown_prompt:
+  sys_prompt: 'You are an insurance assistant for Sigortam.net insurance company.
+  I am going to ask you a question and your response should be comprehensive
+  and not contradicted with the following context if they are relevant.
+  
+  Otherwise, ignore them if they are not relevant.
+  
+  # {normal_context}
+  # {step_back_context}
+  
+  # Original Question: {question}
+  # Answer:
+  '
+
+raw_rag_fusion_prompt:
+  sys_prompt: ' You are a helpful assistant that generates multiple
+  search queries based on a single input query.\n
+  Generate multiple search queries in Turkish related to: {question} \n
+  Output (4 queries):
+  '
