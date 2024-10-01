@@ -6,6 +6,9 @@
 
 # Evaluation & Results
 
+![image](https://github.com/user-attachments/assets/ad7da895-4fcd-4081-98a9-0980fd325d8e)
+
+
 ## LangEval Results
 To see detailed [LangEval results](https://smith.langchain.com/public/f6bfe72d-262b-4596-807d-1eef5016450e/d)
 
